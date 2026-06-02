@@ -1,8 +1,8 @@
+import { colors, fontFamily, radius, spacing } from "@/constants/theme";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
-import { colors, fontFamily, radius, spacing } from "@/constants/theme";
 
 export default function ExploreSection() {
   return (
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
-    backgroundColor: colors.accent.DEFAULT,
+    backgroundColor: colors.gold[400],
     alignSelf: "flex-start",
     paddingHorizontal: spacing.lg,
     paddingVertical: 10,

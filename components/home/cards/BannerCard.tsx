@@ -1,10 +1,16 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View, ImageBackground, Platform } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
 import { colors, fontFamily, radius, spacing } from "@/constants/theme";
-import { Banner } from "../types";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import React from "react";
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { BANNER_WIDTH } from "../constants";
+import { Banner } from "../types";
 
 export default function BannerCard({
   item,
@@ -54,15 +60,6 @@ const styles = StyleSheet.create({
     borderRadius: radius["3xl"],
     overflow: "hidden",
     marginRight: spacing.md,
-    ...Platform.select({
-      ios: {
-        shadowColor: colors.primary.DEFAULT,
-        shadowOffset: { width: 0, height: 6 },
-        shadowOpacity: 0.18,
-        shadowRadius: 14,
-      },
-      android: { elevation: 5 },
-    }),
   },
   bannerImage: { flex: 1 },
   bannerOverlay: {
@@ -82,7 +79,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 6,
-    backgroundColor: colors.accent.DEFAULT,
+    backgroundColor: colors.gold[400],
     alignSelf: "flex-start",
     paddingHorizontal: 14,
     paddingVertical: 6,

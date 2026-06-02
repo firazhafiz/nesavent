@@ -1,8 +1,8 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View, ImageBackground, Platform } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
 import { colors, fontFamily, radius, spacing } from "@/constants/theme";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import React from "react";
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { formatPrice } from "../helpers";
 import { ForYouEvent } from "../types";
 
@@ -96,15 +96,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.card,
     borderRadius: radius["2xl"],
     overflow: "hidden",
-    ...Platform.select({
-      ios: {
-        shadowColor: colors.primary.DEFAULT,
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.08,
-        shadowRadius: 10,
-      },
-      android: { elevation: 2 },
-    }),
   },
   forYouImage: {
     width: "100%",

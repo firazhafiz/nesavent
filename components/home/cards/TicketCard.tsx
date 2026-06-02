@@ -1,9 +1,9 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View, Platform } from "react-native";
-import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { colors, fontFamily, radius, spacing } from "@/constants/theme";
-import { Ticket } from "../types";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SCREEN_WIDTH } from "../constants";
+import { Ticket } from "../types";
 
 export default function TicketCard({
   item,
@@ -109,15 +109,6 @@ const styles = StyleSheet.create({
     borderRadius: radius["2xl"],
     flexDirection: "row",
     overflow: "hidden",
-    ...Platform.select({
-      ios: {
-        shadowColor: colors.primary.DEFAULT,
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.1,
-        shadowRadius: 12,
-      },
-      android: { elevation: 3 },
-    }),
   },
   ticketAccent: {
     width: 6,

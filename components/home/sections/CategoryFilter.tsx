@@ -1,7 +1,13 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, ScrollView, Platform, View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { colors, fontFamily, radius, spacing } from "@/constants/theme";
+import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { CATEGORIES } from "../data";
 
 export default function CategoryFilter({
@@ -70,21 +76,12 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: radius.full,
     backgroundColor: colors.card,
-    borderWidth: 1.5,
+    borderWidth: 1,
     borderColor: colors.border,
-    ...Platform.select({
-      ios: {
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.05,
-        shadowRadius: 4,
-      },
-      android: { elevation: 1 },
-    }),
   },
   categoryChipActive: {
-    backgroundColor: colors.accent.DEFAULT,
-    borderColor: colors.accent.DEFAULT,
+    backgroundColor: colors.gold[400],
+    borderColor: colors.gold[600],
   },
   categoryLabel: {
     fontFamily: fontFamily.medium,

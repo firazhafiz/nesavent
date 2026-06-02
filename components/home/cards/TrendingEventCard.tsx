@@ -1,12 +1,18 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View, ImageBackground, Platform } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
 import { colors, fontFamily, radius, spacing } from "@/constants/theme";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import React from "react";
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import TagBadge from "../TagBadge";
+import { CARD_HEIGHT, CARD_WIDTH } from "../constants";
 import { formatPrice } from "../helpers";
 import { TrendingEvent } from "../types";
-import { CARD_WIDTH, CARD_HEIGHT } from "../constants";
 
 export default function TrendingEventCard({
   item,
@@ -93,15 +99,6 @@ const styles = StyleSheet.create({
     borderRadius: radius["2xl"],
     overflow: "hidden",
     marginRight: spacing.md,
-    ...Platform.select({
-      ios: {
-        shadowColor: colors.primary.DEFAULT,
-        shadowOffset: { width: 0, height: 8 },
-        shadowOpacity: 0.2,
-        shadowRadius: 16,
-      },
-      android: { elevation: 6 },
-    }),
   },
   trendingCardImage: {
     width: CARD_WIDTH,

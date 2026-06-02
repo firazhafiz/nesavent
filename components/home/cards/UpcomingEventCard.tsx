@@ -4,7 +4,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import {
   ImageBackground,
-  Platform,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -64,15 +63,6 @@ const styles = StyleSheet.create({
     borderRadius: radius["2xl"],
     overflow: "hidden",
     marginRight: spacing.md,
-    ...Platform.select({
-      ios: {
-        shadowColor: colors.primary.DEFAULT,
-        shadowOffset: { width: 0, height: 6 },
-        shadowOpacity: 0.15,
-        shadowRadius: 10,
-      },
-      android: { elevation: 4 },
-    }),
   },
   upcomingCardModernImage: {
     width: "100%",
