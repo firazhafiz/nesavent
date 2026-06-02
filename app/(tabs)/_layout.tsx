@@ -11,7 +11,7 @@ export default function TabLayout() {
   const insets = useSafeAreaInsets();
 
   // Tinggi tab bar dinamis agar aman menempel di iOS maupun Android
-  const barHeight = Platform.OS === "ios" ? 54 + insets.bottom : 70;
+  const barHeight = Platform.OS === "ios" ? 44 + insets.bottom : 70;
   const paddingBottomAmount = Platform.OS === "ios" ? insets.bottom - 8 : 0;
 
   return (
@@ -117,7 +117,7 @@ function TabIcon({ focused, iconName, isExplore }: TabIconProps) {
   // KALIBRASI OPTIK UTAMA:
   // Jika ikon adalah explore (kompas), kita up ukurannya ke 26 agar lingkaran kompasnya melar
   // dan seimbang dengan tinggi ikon home/ticket/profile yang dikunci di 24.
-  const finalSize = isExplore ? 28 : 24;
+  const finalSize = isExplore ? 26 : 22;
 
   return (
     <View style={styles.iconWrapper}>
