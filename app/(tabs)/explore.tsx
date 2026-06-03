@@ -762,7 +762,7 @@ const styles = StyleSheet.create({
   },
   seeAllText: {
     fontFamily: fontFamily.semibold,
-    fontSize: 13,
+    fontSize: 12,
     color: colors.accent.DEFAULT,
   },
 
