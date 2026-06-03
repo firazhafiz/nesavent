@@ -1,10 +1,10 @@
-import React from "react";
-import { StyleSheet, View, FlatList } from "react-native";
 import { spacing } from "@/constants/theme";
-import { UPCOMING_EVENTS } from "../data";
-import { SCREEN_WIDTH } from "../constants";
-import SectionHeader from "../SectionHeader";
+import React from "react";
+import { FlatList, StyleSheet, View } from "react-native";
+import SectionHeader from "../atom/SectionHeader";
 import UpcomingEventCard from "../cards/UpcomingEventCard";
+import { SCREEN_WIDTH } from "../utils/constants";
+import { UPCOMING_EVENTS } from "../utils/data";
 
 export default function UpcomingSection() {
   return (

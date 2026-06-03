@@ -1,7 +1,7 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 import { colors, fontFamily, spacing } from "@/constants/theme";
+import { Ionicons } from "@expo/vector-icons";
+import React from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function SectionHeader({
   title,
@@ -26,14 +26,14 @@ export default function SectionHeader({
         {subtitle && <Text style={styles.sectionSubtitle}>{subtitle}</Text>}
       </View>
       {onPressAll && (
-        <TouchableOpacity onPress={onPressAll} style={styles.seeAllBtn}>
+        <Pressable onPress={onPressAll} style={styles.seeAllBtn}>
           <Text style={styles.seeAllText}>Lihat Semua</Text>
           <Ionicons
             name="chevron-forward"
             size={14}
             color={colors.accent.DEFAULT}
           />
-        </TouchableOpacity>
+        </Pressable>
       )}
     </View>
   );
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   sectionHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "flex-end",
+    alignItems: "center",
     marginBottom: spacing.md,
   },
   sectionTitle: {
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: colors.muted.foreground,
     marginTop: 2,
+    paddingLeft: 26,
   },
   seeAllBtn: {
     flexDirection: "row",

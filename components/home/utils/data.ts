@@ -1,15 +1,15 @@
 import { colors } from "@/constants/theme";
 import {
-  MockUser,
-  Category,
-  TrendingEvent,
-  LoopingTrendingEvent,
-  ForYouEvent,
-  UpcomingEvent,
-  Ticket,
-  Banner,
-  LoopingBanner,
   Article,
+  Banner,
+  Category,
+  ForYouEvent,
+  LoopingBanner,
+  LoopingTrendingEvent,
+  MockUser,
+  Ticket,
+  TrendingEvent,
+  UpcomingEvent,
 } from "./types";
 
 export const mockUser: MockUser = {
@@ -98,7 +98,9 @@ export const TRENDING_EVENTS: TrendingEvent[] = [
   },
 ];
 
-export const LOOPING_TRENDING: LoopingTrendingEvent[] = Array.from({ length: 100 })
+export const LOOPING_TRENDING: LoopingTrendingEvent[] = Array.from({
+  length: 100,
+})
   .flatMap(() => TRENDING_EVENTS)
   .map((item, index) => ({
     ...item,

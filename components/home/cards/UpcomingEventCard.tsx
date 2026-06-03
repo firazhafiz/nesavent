@@ -9,8 +9,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SCREEN_WIDTH } from "../constants";
-import { UpcomingEvent } from "../types";
+import { SCREEN_WIDTH } from "../utils/constants";
+import { UpcomingEvent } from "../utils/types";
 
 export default function UpcomingEventCard({
   item,

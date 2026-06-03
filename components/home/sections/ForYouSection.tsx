@@ -1,16 +1,16 @@
-import React from "react";
-import { StyleSheet, View, FlatList } from "react-native";
 import { spacing } from "@/constants/theme";
-import { FOR_YOU_EVENTS } from "../data";
-import SectionHeader from "../SectionHeader";
+import React from "react";
+import { FlatList, StyleSheet, View } from "react-native";
+import SectionHeader from "../atom/SectionHeader";
 import ForYouCard from "../cards/ForYouCard";
+import { FOR_YOU_EVENTS } from "../utils/data";
 
 export default function ForYouSection() {
   return (
     <View style={styles.section}>
       <View>
         <SectionHeader
-          title="Rekomendasi Untuk Kamu"
+          title="Rekomendasi"
           subtitle="Berdasarkan minat & jurusanmu"
           icon="sparkles"
           onPressAll={() => {}}
@@ -24,9 +24,7 @@ export default function ForYouSection() {
         contentContainerStyle={{
           gap: spacing.md,
         }}
-        renderItem={({ item }) => (
-          <ForYouCard item={item} onPress={() => {}} />
-        )}
+        renderItem={({ item }) => <ForYouCard item={item} onPress={() => {}} />}
       />
     </View>
   );

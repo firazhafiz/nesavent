@@ -9,10 +9,10 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import TagBadge from "../TagBadge";
-import { CARD_HEIGHT, CARD_WIDTH } from "../constants";
-import { formatPrice } from "../helpers";
-import { TrendingEvent } from "../types";
+import TagBadge from "../atom/TagBadge";
+import { CARD_HEIGHT, CARD_WIDTH } from "../utils/constants";
+import { formatPrice } from "../utils/helpers";
+import { TrendingEvent } from "../utils/types";
 
 export default function TrendingEventCard({
   item,

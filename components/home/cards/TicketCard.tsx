@@ -2,8 +2,8 @@ import { colors, fontFamily, radius, spacing } from "@/constants/theme";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { SCREEN_WIDTH } from "../constants";
-import { Ticket } from "../types";
+import { SCREEN_WIDTH } from "../utils/constants";
+import { Ticket } from "../utils/types";
 
 export default function TicketCard({
   item,

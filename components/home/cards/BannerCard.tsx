@@ -9,8 +9,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { BANNER_WIDTH } from "../constants";
-import { Banner } from "../types";
+import { BANNER_WIDTH } from "../utils/constants";
+import { Banner } from "../utils/types";
 
 export default function BannerCard({
   item,

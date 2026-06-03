@@ -1,10 +1,10 @@
 import { spacing } from "@/constants/theme";
 import React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
+import SectionHeader from "../atom/SectionHeader";
 import TrendingEventCard from "../cards/TrendingEventCard";
-import { CARD_WIDTH, SCREEN_WIDTH } from "../constants";
-import { LOOPING_TRENDING, TRENDING_EVENTS } from "../data";
-import SectionHeader from "../SectionHeader";
+import { CARD_WIDTH, SCREEN_WIDTH } from "../utils/constants";
+import { LOOPING_TRENDING, TRENDING_EVENTS } from "../utils/data";
 
 export default function TrendingSection() {
   return (

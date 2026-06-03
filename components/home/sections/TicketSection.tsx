@@ -1,9 +1,9 @@
-import React from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
 import { spacing } from "@/constants/theme";
-import { MY_TICKETS } from "../data";
-import SectionHeader from "../SectionHeader";
+import React from "react";
+import { ScrollView, StyleSheet, View } from "react-native";
+import SectionHeader from "../atom/SectionHeader";
 import TicketCard from "../cards/TicketCard";
+import { MY_TICKETS } from "../utils/data";
 
 export default function TicketSection() {
   if (MY_TICKETS.length === 0) return null;

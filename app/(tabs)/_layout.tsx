@@ -12,7 +12,7 @@ export default function TabLayout() {
 
   // Tinggi tab bar dinamis agar aman menempel di iOS maupun Android
   const barHeight = Platform.OS === "ios" ? 44 + insets.bottom : 70;
-  const paddingBottomAmount = Platform.OS === "ios" ? insets.bottom - 8 : 0;
+  const paddingBottomAmount = Platform.OS === "ios" ? insets.bottom : 20;
 
   return (
     <Tabs

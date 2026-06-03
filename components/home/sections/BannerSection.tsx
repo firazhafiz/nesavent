@@ -1,10 +1,10 @@
 import { colors, spacing } from "@/constants/theme";
 import React, { useState } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
+import SectionHeader from "../atom/SectionHeader";
 import BannerCard from "../cards/BannerCard";
-import { BANNER_WIDTH, SCREEN_WIDTH } from "../constants";
-import { BANNERS, LOOPING_BANNERS } from "../data";
-import SectionHeader from "../SectionHeader";
+import { BANNER_WIDTH, SCREEN_WIDTH } from "../utils/constants";
+import { BANNERS, LOOPING_BANNERS } from "../utils/data";
 
 export default function BannerSection() {
   const [activeBanner, setActiveBanner] = useState(0);

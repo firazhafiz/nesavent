@@ -8,8 +8,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { ARTICLES } from "../data";
-import SectionHeader from "../SectionHeader";
+import SectionHeader from "../atom/SectionHeader";
+import { ARTICLES } from "../utils/data";
 
 export default function ArticleSection() {
   return (

@@ -2,9 +2,15 @@ import { colors, fontFamily, radius, spacing } from "@/constants/theme";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { formatPrice } from "../helpers";
-import { ForYouEvent } from "../types";
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { formatPrice } from "../utils/helpers";
+import { ForYouEvent } from "../utils/types";
 
 export default function ForYouCard({
   item,

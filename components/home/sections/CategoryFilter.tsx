@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { CATEGORIES } from "../data";
+import { CATEGORIES } from "../utils/data";
 
 export default function CategoryFilter({
   activeCategory,

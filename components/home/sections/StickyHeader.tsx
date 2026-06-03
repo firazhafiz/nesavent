@@ -1,10 +1,18 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View, ImageBackground, Platform, Animated } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
 import { colors, fontFamily, radius, spacing } from "@/constants/theme";
-import { mockUser } from "../data";
+import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import React from "react";
+import {
+  Animated,
+  ImageBackground,
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { EdgeInsets } from "react-native-safe-area-context";
+import { mockUser } from "../utils/data";
 
 export default function StickyHeader({
   stickyHeaderOpacity,

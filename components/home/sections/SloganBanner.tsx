@@ -1,8 +1,8 @@
-import React from "react";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { fontFamily, spacing } from "@/constants/theme";
-import { SCREEN_WIDTH } from "../constants";
+import { LinearGradient } from "expo-linear-gradient";
+import React from "react";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { SCREEN_WIDTH } from "../utils/constants";
 
 export default function SloganBanner() {
   return (

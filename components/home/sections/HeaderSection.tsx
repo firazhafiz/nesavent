@@ -1,5 +1,5 @@
 import { colors, fontFamily, radius, spacing } from "@/constants/theme";
-import { Feather, Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import {
@@ -13,8 +13,8 @@ import {
   View,
 } from "react-native";
 import { EdgeInsets } from "react-native-safe-area-context";
-import { SEARCH_BAR_H, SEARCH_OVERLAP } from "../constants";
-import { mockUser } from "../data";
+import { SEARCH_BAR_H, SEARCH_OVERLAP } from "../utils/constants";
+import { mockUser } from "../utils/data";
 
 export default function HeaderSection({
   originalHeaderOpacity,
@@ -84,10 +84,7 @@ export default function HeaderSection({
             },
           ].map((s, index, array) => (
             <React.Fragment key={s.label}>
-              <TouchableOpacity
-                style={styles.statCard}
-                activeOpacity={0.75}
-              >
+              <TouchableOpacity style={styles.statCard} activeOpacity={0.75}>
                 <Text style={styles.statNum}>{s.value}</Text>
                 <Text style={styles.statLabel}>{s.label}</Text>
               </TouchableOpacity>
@@ -99,20 +96,17 @@ export default function HeaderSection({
 
       <View style={styles.searchBarFloat}>
         <View style={styles.searchBar}>
-          <Ionicons
-            name="search-outline"
-            size={18}
-            color={colors.muted.foreground}
-          />
           <TextInput
             style={styles.searchInput}
             placeholder="Cari event, organisasi..."
             placeholderTextColor={colors.muted.foreground}
             returnKeyType="search"
           />
-          <TouchableOpacity style={styles.searchFilter}>
-            <Feather name="sliders" size={16} color={colors.primary.DEFAULT} />
-          </TouchableOpacity>
+          <Ionicons
+            name="search-outline"
+            size={18}
+            color={colors.muted.foreground}
+          />
         </View>
       </View>
     </Animated.View>
@@ -263,7 +257,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#fff",
     borderRadius: radius.full,
-    paddingHorizontal: spacing.md,
+    paddingHorizontal: spacing["xl"],
     height: SEARCH_BAR_H,
     gap: spacing.sm,
     borderWidth: 0.5,
